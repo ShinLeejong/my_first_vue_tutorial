@@ -2,8 +2,7 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <CanYouSeeMe v-if="visible" message="can you see me now?" />
-    <Button v-on:click="visible = !visible">Toggle</Button>
+    <CanYouSeeMe message_one="can you see me now?" message_two="now you don't."/>
     <Counter />
   </div>
 </template>
@@ -15,11 +14,6 @@ import Counter from './components/Counter.vue'
 
 export default {
   name: 'App',
-  data: function () {
-    return {
-      visible: true
-    }
-  },
   components: {
     HelloWorld,
     CanYouSeeMe,
