@@ -4,12 +4,14 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <CanYouSeeMe v-if="visible" message="can you see me now?" />
     <Button v-on:click="visible = !visible">Toggle</Button>
+    <Counter />
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import CanYouSeeMe from './components/CanYouSeeMe.vue'
+import Counter from './components/Counter.vue'
 
 export default {
   name: 'App',
@@ -20,7 +22,8 @@ export default {
   },
   components: {
     HelloWorld,
-    CanYouSeeMe
+    CanYouSeeMe,
+    Counter
   }
 }
 </script>
