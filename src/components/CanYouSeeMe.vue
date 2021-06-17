@@ -6,7 +6,7 @@
         <div class="CanYouSeeMe">
             {{ message_two }}
         </div>
-        <button v-on:click="onClick">Toggle</button>        
+        <button v-on:click="onClick">Toggle</button>
     </div>
 </template>
 <script>

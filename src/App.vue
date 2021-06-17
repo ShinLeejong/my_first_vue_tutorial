@@ -4,6 +4,8 @@
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <CanYouSeeMe message_one="can you see me now?" message_two="now you don't."/>
     <Counter />
+    <DontLeaveMe />
+    <DontBotherMe />
   </div>
 </template>
 
@@ -11,13 +13,17 @@
 import HelloWorld from './components/HelloWorld.vue'
 import CanYouSeeMe from './components/CanYouSeeMe.vue'
 import Counter from './components/Counter.vue'
+import DontLeaveMe from './components/DontLeaveMe.vue'
+import DontBotherMe from './components/DontBotherMe.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     CanYouSeeMe,
-    Counter
+    Counter,
+    DontLeaveMe,
+    DontBotherMe
   }
 }
 </script>
