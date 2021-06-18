@@ -1,3 +1,6 @@
+### docs 폴더는 gh-pages를 위하여 build하기 위해 webpack된 폴더이며,
+### gh-pages의 주소는 <a href="https://iiy4383.github.io/my_first_vue_tutorial">이곳으로 와주세요.</a>
+
 # my_first_vue
 
 Vue를 처음 공부하기 시작했습니다.
