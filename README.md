@@ -5,6 +5,11 @@ Vue를 처음 공부하기 시작했습니다.
 갈 길이 멀고 늦은 감도 있고, Svelte를 선수 학습하고 Vue를 하는 이상한 느낌도 있지만
 그래도 한 번 최대한 공부해보려 합니다.
 
+## 20210618
+React의 Hook인 useState를 이용한 Data Binding 방법과 유사하게
+v-model을 사용하는 방법을 배웠습니다.
+v-bind:class 를 이용해 Dynamic하게 CSS를 사용하는 방법을 배웠습니다.
+
 ## 20210617
 v-on:Click.once , v-on:Click.prevent 와 같은
 Event Modifier를 적용해보았습니다.
