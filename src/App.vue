@@ -30,6 +30,10 @@
         {{key}} : {{val}}
       </div>
     </template>
+    <div>
+      <input type="text" ref="input" name="$ref_test" id="$ref_test_text" />  
+      <button @click="onClick">Click Me</button>    
+    </div>
   </div>
 </template>
 
@@ -62,6 +66,18 @@ export default {
     DontLeaveMe,
     DontBotherMe,
     NewWayOfDataBinding
+  },
+  methods: {
+    onClick: function () {
+      try {
+        // $ref의 사용은 Vue의 목적(개발자가 DOM을 직접적으로 접근하지 않도록)
+        // 에 어긋나므로 알고만 있고 사용은 피하자
+        console.log(this.$refs);
+        console.log(this.$refs.input.value);
+      } catch {
+        console.log("not done");
+      }
+    }
   }
 }
 </script>

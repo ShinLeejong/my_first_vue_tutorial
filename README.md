@@ -17,6 +17,12 @@ Memo : "v-if는 정말 조건적 그 자체지만, v-show는 해당 태그의 st
 v-for를 이용하여 컴포넌트를 만드는 방법을 알았고, template 태그가 무슨 역할인지 이제 안 것 같습니다.
 React에서 사용하는 <> </> 와 같다고 느껴지네요.
 
+지금까지 익힌 것으로 간단한 Punchbag 게임을 만들었습니다! punchbag_game 브랜치에 올렸습니다.
+
+v-on:click과 같은 방법과 유사한 @click 과 같은 키워드와, $refs에 대해서 알게 되었습니다.
+$refs는 Vue가 추구하는 목적과 다른 방향성의 사용이라고 하니, 알고만 있고 사용은 피해야겠습니다.
+컴포넌트를 Nesting한다는 개념이 무엇인지 학습했습니다.
+
 ## 20210618
 React의 Hook인 useState를 이용한 Data Binding 방법과 유사하게
 v-model을 사용하는 방법을 배웠습니다.
