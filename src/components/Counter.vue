@@ -22,5 +22,8 @@ export default {
     }
 }
 </script>
-<style>
+<style scoped>
+p {
+    color: blue;
+}
 </style>

@@ -34,6 +34,7 @@
       <input type="text" ref="input" name="$ref_test" id="$ref_test_text" />  
       <button @click="onClick">Click Me</button>    
     </div>
+    <Friends v-bind:friends="friends"/>
   </div>
 </template>
 
@@ -43,6 +44,7 @@ import Counter from './components/Counter.vue'
 import DontLeaveMe from './components/DontLeaveMe.vue'
 import DontBotherMe from './components/DontBotherMe.vue'
 import NewWayOfDataBinding from './components/NewWayOfDataBinding.vue'
+import Friends from './components/Friends.vue'
 
 export default {
   name: 'App',
@@ -57,15 +59,26 @@ export default {
         hobby: ["Playing Game", "Singing"],
         email: "znlspf123@naver.com"
       },
-      template_is_amazing: ["This", "is", "amazing", "!"]
+      template_is_amazing: ["This", "is", "amazing", "!"],
+      friends: {
+        1: "Lee",
+        2: "Kim",
+        3: "Park",
+        4: "Gu",
+        5: "Ri",
+        6: "Yein",
+        7: "Yiniddo"
+      }
     }
   },
   components: {
+    // 'canYouSeeMe': CanYouSeeMe,
     CanYouSeeMe,
     Counter,
     DontLeaveMe,
     DontBotherMe,
-    NewWayOfDataBinding
+    NewWayOfDataBinding,
+    Friends
   },
   methods: {
     onClick: function () {
@@ -96,10 +109,6 @@ export default {
   color: red;
 }
 
-.blue {
-  color: blue;
-}
-
 .dynamicCSS > p {
   font-size: 1.5rem;
   color: green;
@@ -108,6 +117,10 @@ export default {
 #myUl {
   list-style: none;
   padding: 0;
+}
+
+p {
+  color: violet;
 }
 
 </style>
