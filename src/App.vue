@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <CanYouSeeMe message_one="can you see me now?" message_two="now you don't."/>
     <Counter />
     <DontLeaveMe />
@@ -13,6 +12,24 @@
       <button v-on:click="dynamicCSS = !dynamicCSS">click me to toggle color</button>
       <p>hi there!</p>
     </div>
+    <button id="toggleShow" v-on:click="show = !show">toggle show!</button>
+    <p v-if="show">show me!</p>
+    <p v-show="show">elseif show me!</p>
+    <ul id="myUl">
+      <p>My hobbies:</p>
+      <li v-for="(hobby, index) of Lee.hobby" v-bind:key="hobby">{{index + 1}}. {{hobby}}</li>
+    </ul>
+    <template v-for="text in template_is_amazing">
+      <span v-bind:key="text">
+        {{text}}
+      </span>
+    </template>
+    <p>Let me introduce myself.</p>
+    <template v-for="(val, key) in Lee">
+      <div v-bind:key="key">
+        {{key}} : {{val}}
+      </div>
+    </template>
   </div>
 </template>
 
@@ -27,7 +44,16 @@ export default {
   name: 'App',
   data: function () {
     return {
-      dynamicCSS: true
+      dynamicCSS: true,
+      show: true,
+      show_important: true,
+      Lee: {
+        name: "Lee",
+        age: 27,
+        hobby: ["Playing Game", "Singing"],
+        email: "znlspf123@naver.com"
+      },
+      template_is_amazing: ["This", "is", "amazing", "!"]
     }
   },
   components: {
@@ -61,6 +87,11 @@ export default {
 .dynamicCSS > p {
   font-size: 1.5rem;
   color: green;
+}
+
+#myUl {
+  list-style: none;
+  padding: 0;
 }
 
 </style>

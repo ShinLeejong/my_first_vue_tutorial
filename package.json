@@ -8,7 +8,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "node ./node_modules/vue-gh-pages/index.js"
+    "deploy": "node ./node_modules/vue-gh-pages/index.js -p",
+    "lint_and_deploy": "npm run lint -- --fix && node ./node_modules/vue-gh-pages/index.js -p"
   },
   "dependencies": {
     "core-js": "^3.6.5",
