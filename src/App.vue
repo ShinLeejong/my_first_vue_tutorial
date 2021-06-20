@@ -35,6 +35,7 @@
       <button @click="onClick">Click Me</button>    
     </div>
     <Friends v-bind:friends="friends"/>
+    <Emitter v-on:changeMessage="changeMessage($event)" />
   </div>
 </template>
 
@@ -45,6 +46,7 @@ import DontLeaveMe from './components/DontLeaveMe.vue'
 import DontBotherMe from './components/DontBotherMe.vue'
 import NewWayOfDataBinding from './components/NewWayOfDataBinding.vue'
 import Friends from './components/Friends.vue'
+import Emitter from './components/Emitter.vue'
 
 export default {
   name: 'App',
@@ -68,7 +70,8 @@ export default {
         5: "Ri",
         6: "Yein",
         7: "Yiniddo"
-      }
+      },
+      someMessage: "Will you change me?"
     }
   },
   components: {
@@ -78,7 +81,8 @@ export default {
     DontLeaveMe,
     DontBotherMe,
     NewWayOfDataBinding,
-    Friends
+    Friends,
+    Emitter
   },
   methods: {
     onClick: function () {
@@ -90,6 +94,10 @@ export default {
       } catch {
         console.log("not done");
       }
+    },
+    changeMessage: function () {
+      console.log("fired");
+      window.alert("No, Never!");
     }
   }
 }
